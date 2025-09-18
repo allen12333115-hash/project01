@@ -1,0 +1,176 @@
+/* 字型設定 */
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&family=Chocolate+Classical+Sans&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    /* font-family: "Public Sans", sans-serif; */
+    font-family: "Chiron GoRound TC", sans-serif;
+    /* font-family: "Chocolate Classical Sans", sans-serif; */
+    font-optical-sizing: auto;
+    /* 光學尺寸調整，大尺寸有細節，小尺寸無細節(意辨讀)*/
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+
+    background-color: #FBE5C0;
+}
+
+.wrap {
+    width: 1200px;
+    margin: auto;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/*LOGO*/
+.banner h1 img {
+    width: 300px;
+}
+
+/*搜尋框*/
+.banner .search {
+    margin: auto;
+    position: relative;
+}
+
+.banner .search input {
+    line-height: 24px;
+    background-color: #fdfdfd;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    width: 400px;
+}
+
+/*搜尋框中的放大鏡(背景按鈕)*/
+.banner .search .icon_magnifier {
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    mask-image: url('../image/icon_magnifier.svg');
+    mask-size: cover;
+    color: transparent;
+}
+
+.banner .search button {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    background-color: transparent;
+    border: none;
+}
+
+.banner .search button:hover .icon_magnifier {
+    background-color: #FFB231;
+}
+
+/*會員 & 購物袋*/
+.banner ul {
+    margin-left: auto;
+    margin-right: 20px;
+    display: flex;
+}
+
+.banner ul li {
+    margin-left: 20px;
+}
+
+.banner li .user {
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-color: #000;
+    mask-image: url('../image/icon_user.svg');
+    mask-size: cover;
+    color: transparent;
+}
+
+.banner li .user:hover {
+    background-color: #FFB231;
+}
+
+.banner li .shoppingbag {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    mask-image: url('../image/icon_shoppingbag.svg');
+    mask-size: cover;
+    color: transparent;
+}
+
+.banner li .shoppingbag:hover {
+    background-color: #FFB231;
+}
+
+/*header 商品分類*/
+.headerCateory {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+
+.headerCateory a {
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    line-height: 2;
+    text-align: center;
+    background-color: #94664E;
+    color: #ffe196;
+    text-decoration: none;
+}
+
+.headerCateory a:hover {
+    background-image: linear-gradient(#94664E 20%, #e7b764);
+    color: #FFF;
+}
+
+/*以下為內容*/
+.conent {
+    width: 100%;
+}
+
+/*廣告看板 heropage*/
+.heroPage {
+    width: 100%;
+    position: relative;
+}
+
+.heroPage img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+/*輪播按鈕*/
+.heroPageNav {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    z-index: 99;
+}
+
+.heroPageNav a {
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid orange;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: transparent;
+}
+.heroPageNav a:hover{
+    background-color: orange;
+} 
+.heroPageNav a.activeSlide{
+    background-color: orange;
+}
